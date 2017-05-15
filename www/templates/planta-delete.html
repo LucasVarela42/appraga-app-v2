@@ -1,0 +1,29 @@
+<ion-modal-view class="modalCadastrar">
+  <ion-header-bar>
+    <h1 class="title">Remover planta</h1>
+    <div class="buttons">
+      <button class="button button-icon button-clear button-stable ion-close-round" ng-click="closeRemover()"></button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content>
+    <form>
+      <ion-list class="list card cardModal" ng-repeat="planta in listaPlantas">
+        <!-- <ion-checkbox class="checkboxPlantas item-checkbox-right checkbox-dark" ng-click="isSelectedPlanta($index)"> -->
+        <ion-item class="item item-avatar-left item-text-wrap item-button-right">
+          <img class="full-image" src="img/maca.png" alt="Macieira">
+          <h2>{{planta.nome}}</h2>
+          <p class="descricao">{{planta.texto1}}</p>
+          <button class="button button-light" ng-click="doRemover($index)">
+            <i class="icon icon-item-left ion-close-circled"></i>
+          </button>
+        </ion-item>
+        <!-- </ion-checkbox> -->
+      </ion-list>
+    </form>
+  </ion-content>
+
+  <!-- <ion-footer-bar>
+    <button class="bar-button-center button button-dark" type="submit">Remover</button>
+  </ion-footer-bar> -->
+</ion-modal-view>

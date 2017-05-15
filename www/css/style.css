@@ -1,0 +1,113 @@
+/*Textos*/
+h2.titulo{
+  white-space: normal;
+  height: 1.6em;
+}
+p.descricao{
+  white-space: normal;
+}
+/*Textos*/
+
+/*Container principal*/
+.container{
+  margin: 0 auto;
+  width: 95%;
+}
+/*Container principal*/
+
+/*Menu lateral - Tamanho das linhas*/
+.menu-left{
+  line-height: 1.1em;
+}
+/*Menu lateral - Tamanho das linhas*/
+
+/*Modal Margens*/
+.cardModal{
+  margin: 0px 0px;
+}
+/*Modal Margens*/
+
+/*Menus e Modals Responsivos*/
+@media (min-width: 768px) {
+  .menu-content {
+    -webkit-transform: translate3d(245px, 0px, 0px) !important;
+    width: calc(100% - 245px) !important;
+  }
+  .bar-header button.ion-navicon {
+    display: none;
+  }
+  .modalLogin {
+    bottom: auto;
+    min-height: 240px;
+  }
+  .modalCadastrar {
+    top: 7%;
+    width: calc(100% - 40%) !important;
+    height: calc(100% - 13%) !important;
+  }
+}
+@media (min-width: 680px) {
+  .modalLogin{
+    bottom: auto;
+  }
+  .modalCadastrar {
+    top: 7%;
+    bottom: 7%;
+  }
+}
+/*Menus e Modals Responsivos*/
+
+/**/
+.bar.bar-header {
+  background: rgba(255,255,255,.98);
+
+}
+.tabs.tab-nav{
+  background-color: rgba(255,255,255,.98);
+}
+
+.menu .scroll-content{
+  background-color: #fff;
+}
+
+.scroll-content {
+  background-color: #f1f1f1;
+  overflow: visible !important;
+}
+
+.modal-backdrop-bg {
+  /*display: none;*/
+}
+
+.modal.modalPesquisar {
+  top: 0;
+  height: 0;
+  /*right: 0;*/
+  bottom: 0;
+  left: calc(100% - 270px) !important;
+  min-height: 42px;
+}
+
+/*Checkbox cadastro*/
+.ionItemCadastro{
+  padding: 16px 16px 0px;
+}
+.labelItemCadastro{
+  padding: 10px 10px 10px;
+}
+.ionCheckboxCadastro{
+  padding: 0px 0px 0px;
+}
+.item-content{
+  padding-top: 10px;
+}
+/*Checkbox cadastro*/
+
+.input-label{
+  padding: 0px 10px 10px 16px;
+}
+
+.bar-button-center{
+  position: absolute;
+  width: 98%;
+}

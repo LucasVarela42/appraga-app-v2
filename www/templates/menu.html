@@ -1,0 +1,60 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-light">
+
+      <!-- <ion-nav-back-button>
+    </ion-nav-back-button> -->
+
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right" ng-controller="PesquisarCtrl">
+        <button class="button button-icon button-clear button-stable ion-search" menu-toggle="right" ng-click="showFilterBar()">
+        </button>
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
+  <ion-nav-view name="menuContent"></ion-nav-view>
+</ion-side-menu-content>
+
+<ion-side-menu side="left" width="245">
+  <ion-header-bar>
+    <h2 class="title">Appraga</h2>
+  </ion-header-bar>
+  <ion-content class="cor-menu">
+    <ion-list class="lista-menu">
+      <ion-item menu-close ng-click="login()">
+        Login
+      </ion-item>
+      <!-- <ion-item menu-close href="#/app/tabs/pesquisar">
+      Pesquisar
+    </ion-item> -->
+    <ion-item menu-close href="#/app/tabs/plantas">
+      Plantas
+    </ion-item>
+    <ion-item menu-close href="#/app/tabs/pragas/">
+      Pragas
+    </ion-item>
+    <ion-item menu-close href="#/app/tabs/manejos/">
+      Manejos
+    </ion-item>
+    <div class="item item-divider text-center">Cadastros</div>
+      <ion-item menu-close ng-controller="CadastroPlantaCtrl" ng-click="cadastrar()">
+        Cadastrar planta
+      </ion-item>
+      <ion-item menu-close ng-controller="CadastroPragaCtrl" ng-click="cadastrar()">
+        Cadastrar praga
+      </ion-item>
+    <div class="item item-divider text-center">Remover</div>
+    <ion-item menu-close ng-controller="RemoverPlantaCtrl" ng-click="remover()">
+      Remover planta
+    </ion-item>
+    <ion-item menu-close ng-controller="CadastroPragaCtrl" ng-click="cadastrar()">
+      Remover praga
+    </ion-item>
+  </ion-list>
+</ion-content>
+</ion-side-menu>
+</ion-side-menus>

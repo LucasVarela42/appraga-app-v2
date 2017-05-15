@@ -1,0 +1,38 @@
+<ion-view view-title="Pragas">
+  <ion-content>
+    <div class="container">
+      <ion-list class="item card" ng-repeat="praga in listaPragas">
+
+        <ion-item href="#/app/tabs/praga-detail/{{$index}}" class="item item-avatar-left item-text-wrap">
+          <img class="full-image" src="img/praga.png" alt="Pragas">
+          <h2 class="titulo">{{praga.nome}}</h2>
+          <p class="descricao">{{praga.cientifico}}</p>
+        </ion-item>
+
+        <div class="item item-body">
+          <img class="full-image" src="img/praga.png" alt="Pragas">
+          <p class="descricao">{{praga.texto2}}</p>
+        </div>
+
+        <div class="row text-center">
+
+            <div class="col col-50">
+            <a class="item item-icon-left" ng-href="#/app/tabs/praga-selecionada/{{$index}}">
+              Plantas afetadas
+              <i class="icon ion-arrow-left-c"></i>
+            </a>
+            </div>
+
+            <div class="col col-50">
+              <a class="item item-icon-right" ng-href="#/app/tabs/manejos/">
+                Continue lendo
+                <i class="icon ion-arrow-right-c"></i>
+              </a>
+              </div>
+
+        </div>
+
+      </ion-list>
+    </ion-content>
+  </div>
+</ion-view>

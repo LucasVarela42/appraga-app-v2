@@ -1,0 +1,25 @@
+<ion-view view-title="Manejos">
+  <ion-content>
+    <div class="container">
+      <ion-list class="item card" ng-repeat="manejo in listaManejos">
+
+        <ion-item href="#/app/tabs/manejo/{{manejo.id}}" class="item item-avatar-left item-text-wrap">
+          <img class="full-image" src="img/manejo.png" alt="Manejo">
+          <h2 class="titulo">{{manejo.nome}}</h2>
+          <p class="descricao">{{manejo.texto1}}</p>
+        </ion-item>
+
+        <div class="item item-body">
+          <img class="full-image" src="img/manejo.png" alt="Manejo">
+          <p class="descricao">{{manejo.texto2}}</p>
+        </div>
+
+        <a class="item item-icon-right">
+          Leia mais
+          <i class="icon ion-arrow-right-c"></i>
+        </a>
+
+      </ion-list>
+    </ion-content>
+  </div>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="Planta Detalhada">
+  <ion-content>
+    <div class="container">
+
+      <ion-list class="item card" ng-repeat="planta in plantaDetalhada">
+        <ion-item class="item item-avatar-left item-text-wrap">
+          <img class="full-image" src="img/maca.png" alt="Macieira">
+          <h2 class="titulo">{{planta.nome}}</h2>
+          <p class="descricao">{{planta.texto1}}</p>
+        </ion-item>
+
+        <div class="item item-body">
+          <img class="full-image" src="img/maca.png" alt="Macieira">
+          <p class="descricao">{{planta.texto2}}</p>
+          <p class="descricao">{{planta.texto3}}</p>
+        </div>
+
+        <a class="item item-icon-left" ng-href="#/app/tabs/plantas">
+          Voltar
+          <i class="icon ion-arrow-left-c"></i>
+        </a>
+
+      </ion-list>
+    </ion-content>
+  </div>
+</ion-view>

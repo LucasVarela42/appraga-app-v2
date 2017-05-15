@@ -1,0 +1,62 @@
+<ion-modal-view class="modalCadastrar">
+  <ion-header-bar>
+    <h1 class="title">Cadastrar praga</h1>
+    <div class="buttons">
+      <button class="button button-icon button-clear button-stable ion-close-round" ng-click="closeCadastrar()"></button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content>
+    <form ng-submit="doCadastro()">
+      <ion-list class="list card cardModal">
+
+        <ion-item class="item">
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Nome*</span>
+            <input type="text" placeholder="Praga" ng-model="cadastro.nome">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Nome científico*</span>
+            <input type="text" placeholder="Insectus Ficticius" ng-model="cadastro.cientifico">
+          </label>
+        </ion-item>
+
+        <ion-item class="item">
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Descrição*</span>
+            <input type="text" placeholder="A praga afeta tal plantação..." ng-model="cadastro.texto1">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Descrição</span>
+            <input type="text" placeholder="Alem disso, a praga afeta aquela plantação..." ng-model="cadastro.texto2">
+          </label>
+        </ion-item>
+
+        <ion-item class="item ionItemCadastro item-avatar-left item-text-wrap">
+
+          <span class="input-label">Plantas*</span>
+          <label class="item labelItemCadastro item-input item-stacked-label" ng-repeat="planta in listaPlantas">
+
+            <ion-checkbox class="ionCheckboxCadastro item-checkbox-right checkbox-dark" ng-model="cadastro.checked[$index]">
+              <img class="full-image" src="img/maca.png" alt="Plantas">
+              <h2 class="titulo">{{planta.nome}}</h2>
+              <p class="descricao">{{planta.texto1}}</p>
+            </ion-checkbox>
+
+          </label>
+          <!-- <pre ng-bind="cadastro | json"></pre> -->
+        </ion-item>
+
+        <label class="item">
+          <p>* Obrigatório</p>
+          <button class="button button-block button-dark" type="submit">Cadastrar</button>
+        </label>
+
+      </ion-list>
+    </form>
+  </ion-content>
+
+  <!-- <ion-footer-bar>
+  <button class="bar-button-center button button-dark" type="submit">Cadastrar</button>
+</ion-footer-bar> -->
+</ion-modal-view>
